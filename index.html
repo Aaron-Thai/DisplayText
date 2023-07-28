@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>val demo</title>
+  <style>
+  p {
+    color: black;
+    margin: 8px;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+</head>
+<body>
+ 
+<input type="text" style="width:400px;" value="Enter text here. Open in Microsoft Edge for Read Aloud options.">
+<p></p>
+ 
+<script>
+$( "input" )
+  .on( "keyup", function() {
+    var value = $( this ).val();
+    $( "p" ).text( value );
+  } )
+  .trigger( "keyup" );
+</script>
+ 
+</body>
+</html>
+
+<!-- source code: 
+    https://api.jquery.com/val/
+    https://stackoverflow.com/questions/29110913/make-textboxes-and-textareas-longer
+-->
